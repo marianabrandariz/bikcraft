@@ -1,0 +1,83 @@
+.tec-bg {
+  background-color: var(--c11);
+  box-shadow: inset 0 80px var(--w), inset 0 -80px var(--w);
+}
+
+.tec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tec-img img {
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+}
+
+.tec-cont {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.tec-cont > span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tec-cont h2 {
+  margin-bottom: 32px;
+}
+
+.tec-cont > p {
+  margin-bottom: 20px;
+}
+
+.tec a {
+  margin-bottom: 80px;
+}
+
+.tec-vant {
+  display: flex;
+  gap: 40px;
+}
+
+.tec-vant h3 {
+  margin-bottom: 8px;
+  width: max-content;
+}
+
+.tec-vant img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .tec-bg {
+    box-shadow: initial;
+  }
+
+  .tec {
+    grid-template-columns: 1fr;
+  }
+
+  .tec a {
+    margin-bottom: 60px;
+  }
+
+  .tec-cont {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .tec-img {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .tec-vant {
+    flex-direction: column;
+  }
+}
