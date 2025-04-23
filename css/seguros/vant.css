@@ -1,0 +1,39 @@
+.vant-bg {
+  background: var(--c12);
+  --pad: 120px;
+}
+
+.vant {
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
+}
+
+.vant h2 {
+  margin-bottom: 60px;
+}
+
+.vant ul {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+  gap: 40px 80px;
+}
+
+.vant h3,
+.vant img {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .vant-bg {
+    --pad: 60px;
+  }
+
+  .vant h2 {
+    margin-bottom: 40px;
+  }
+
+  .vant ul {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,38 @@
+.bici {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.bici-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bici-imagens img {
+  flex: 1;
+  min-width: 200px;
+}
+
+.bici-imagens img:first-child {
+  min-width: 100%;
+}
+
+.bici-conte > p {
+  margin-bottom: 32px;
+}
+
+.bici-comprar {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  justify-items: start;
+}
+
+.bici-comprar a {
+  grid-row: span 2;
+}
