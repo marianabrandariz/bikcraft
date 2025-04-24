@@ -21,6 +21,8 @@
   text-transform: uppercase;
   color: #332200;
   max-width: max-content;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:visited {
