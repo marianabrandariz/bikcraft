@@ -33,28 +33,149 @@
 
 .orca-prod {
   border-radius: 4px 0 0 4px;
-  background: var(--c12);
+  background: var(--c12) url("../../img/dec/bottom-left.svg") no-repeat bottom
+    20px left 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 20px;
+}
+
+.orca-prod > * {
+  grid-column: 1/-1;
+}
+
+.orca-prod > label {
+  grid-column: initial;
+}
+
+.orca-prod label {
+  font: 400 1rem/1.5 "Poppins", sans serif;
+  color: var(--c04);
+  background: var(--c10);
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border: 1px solid var(--c10);
+}
+
+.orca-prod input:checked + label {
+  background: var(--w);
+  color: var(--c11);
+}
+
+.orca-prod label::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--c06);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.orca-prod input:checked + label::before {
+  border-color: var(--c07);
+  box-shadow: inset 0 0 0 3px var(--w), inset 0 0 0 6px var(--c07);
+}
+
+.orca-prod label:hover {
+  background: var(--c09);
+  border-color: var(--c09);
+}
+
+.orca-prod input:focus + label {
+  box-shadow: 0 0 0 2px var(--p01);
+  border-color: var(--c12);
+}
+
+.orca-prod label span {
+  display: none;
+}
+
+.orca-prod input:checked + label span {
+  display: inline-block;
+}
+
+.orca-prod input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
 }
 
 .orca-dados {
   border-radius: 0 4px 4px 0;
-  background: var(--w);
-}
-
-.orca-prod label {
-  display: inline-block;
-  background: var(--c02);
-  padding: 20px;
+  background: var(--w) url("../../img/dec/bottom-right.svg") no-repeat bottom
+    20px right 20px;
 }
 
 .orca-cont {
-  padding: 20px;
-  background: var(--c10);
-  margin: 20px 0;
   display: none;
+}
+
+.orca-cont h2,
+.orca-dados h2:nth-of-type(n + 2) {
+  margin-top: 20px;
 }
 
 #bikcraft:checked ~ #orca-bikcraft,
 #seguro:checked ~ #orca-segu {
-  display: block;
+  display: grid;
+  gap: 20px;
+}
+
+.orca-det {
+  display: none;
+}
+
+.orca-det li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.orca-det li img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.orca-prod input:checked + label + .orca-det {
+  background: var(--w);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .orca-prod,
+  .orca-dados {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .orca {
+    grid-template-columns: 1fr;
+  }
+
+  .orca-prod {
+    border-radius: 5px 5px 0 0;
+    background: var(--c12);
+  }
+
+  .orca-dados {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .orca-prod {
+    grid-template-columns: 1fr;
+  }
 }
