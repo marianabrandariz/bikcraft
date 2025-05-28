@@ -38,6 +38,10 @@
   margin-bottom: 80px;
 }
 
+.tec a:hover {
+  color: var(--w);
+}
+
 .tec-vant {
   display: flex;
   gap: 40px;
